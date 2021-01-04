@@ -34,6 +34,7 @@ import { Parallax } from 'react-scroll-parallax';
                 <li><a href="#about" style={{color:"#000000"}}>about</a></li>
                 <li><a href="#experience" style={{color:"#000000"}}>experience</a></li>
                 <li><a href="#projects" style={{color:"#000000"}}>projects</a></li>
+                <li><a href="#skills" style={{color:"#000000"}}>skills</a></li>
                 <li style={{paddingRight: 0}}><a class="sayHi" href="#sayhi" style={{color:"#000000"}}>say hi</a></li>
               </ul>
             </div>
@@ -75,6 +76,7 @@ class SideNav extends React.Component {
         <a href="#about" id="aboutNav">about</a>
         <a href="#experience" id="experienceNav">experience</a>
         <a href="#projects" id="projectsNav">projects</a>
+        <a href="#skills" id="skillsNav">skills</a>
         <a href="#sayhi" id="sayhiNav">say hi</a>
       </div>
     );
@@ -91,7 +93,6 @@ class Page extends React.Component {
 
 
   render() {
-    var x = this.props.imgurl;
     
     return (
       <div className="page container" id={this.props.id}>
@@ -107,12 +108,6 @@ class Page extends React.Component {
             <p class="desc col-8">{this.props.desc}</p>
             <span class="col-4"></span>
           </span>
-
-          <div class="pagepics">
-          <Parallax className="" x={[0, -30]} tagOuter="figure">
-            <img src={x} width="350" height="490"/>
-          </Parallax>
-          </div>
 
 
         </div>
@@ -150,7 +145,7 @@ class Element extends React.Component {
           </span>
 
           <span class="row learn-more-row" style={{display: this.props.boolLeanMore}}>
-            <p class="desc col-8 learn-more"><a href={this.props.learnmore}>LEARN MORE →</a></p>
+            <p class="desc col-8 learn-more"><a target="_blank" href={this.props.learnmore}>LEARN MORE →</a></p>
             <span class="col-4"></span>
           </span>
         </div>
@@ -184,7 +179,41 @@ class ProjectElement extends React.Component {
             <p class="desc col-8">{this.props.desc}</p>
             <span class="col-4"></span>
           </span>
+
+
+          <span class="row learn-more-row" style={{display: this.props.boolLeanMore}}>
+            <p class="desc col-8 learn-more"><a target="_blank" href={this.props.learnmore}>LEARN MORE →</a></p>
+            <span class="col-4"></span>
+          </span>
         </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+class Skills extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="page container" id={this.props.id}>
+        <div class="header-wrapper">
+          <div class="row">
+            <h2 class="title col-12">Skills</h2>
+          </div>
+
+          <div class="row">
+            <p class="desc col-8"><span style={{fontWeight: "600"}}>Programming: </span>Java, HTML, CSS, Wordpress, some PHP, React, and Python</p>
+            <span class="col-4"></span>
+          </div>
+          <div class="row">
+            <p class="desc col-8"><span style={{fontWeight: "600"}}>Languages: </span>English and Korean (fluent), Spanish and Japanese (proficient), Arabic (beginner)</p>
+            <span class="col-4"></span>
+          </div>
+
         </div>
       </div>
     );
@@ -211,10 +240,10 @@ class SayHi extends React.Component {
           </div>
 
           <div class="row">
-            <span class="col-1"><a href="instagram.com"><img  width="50" height="50" src="https://cdn1.iconfinder.com/data/icons/social-media-outline-6/128/SocialMedia_Instagram-Outline-512.png"></img></a></span>
-            <span class="col-1"><a href="linkedin.com"><img width="43" height="43" src="https://image.flaticon.com/icons/png/512/61/61109.png"></img></a></span>
-            <span class="col-1"><a href="github.com"><img width="47" height="47" src="https://image.flaticon.com/icons/png/512/25/25231.png"></img></a></span>
-            <span class="col-1"><a href="mailto:ryoo.kellyy@gmail.com"><img width="50" height="50" src="https://www.iconpacks.net/icons/1/free-mail-icon-142-thumb.png"></img></a></span>
+            <span class="col-1"><a target="_blank" href={this.props.link1}><img  width="50" height="50" src="https://cdn1.iconfinder.com/data/icons/social-media-outline-6/128/SocialMedia_Instagram-Outline-512.png"></img></a></span>
+            <span class="col-1"><a target="_blank" href={this.props.link2}><img width="43" height="43" src="https://image.flaticon.com/icons/png/512/61/61109.png"></img></a></span>
+            <span class="col-1"><a target="_blank" href={this.props.link3}><img width="47" height="47" src="https://image.flaticon.com/icons/png/512/25/25231.png"></img></a></span>
+            <span class="col-1"><a target="_blank" href={this.props.link4}><img width="50" height="50" src="https://www.iconpacks.net/icons/1/free-mail-icon-142-thumb.png"></img></a></span>
           </div>
 
         </div>
@@ -261,7 +290,9 @@ function App() {
       <ProjectElement title="Flashcard App" color="#C9CBFF" background="#EFF8FF" desc={app} date="December 2020" boolLeanMore="block" learnmore="https://github.com/kelly-ryoo/flashcard-app-hack-challenge-frontend"/>
       <ProjectElement title="Textadventure" color="#999B84" background="#F4EEED" desc={textadventure} date="March 2019" boolLeanMore="block" learnmore="https://github.com/kelly-ryoo/Game-Hidden-Treasure"/>
 
-      <SayHi title="SayHi" id="sayhi" />
+      <Skills title="skills" id="skills" />
+
+      <SayHi title="SayHi" id="sayhi" link1="https://www.instagram.com/k_ryoo/" link2="https://www.linkedin.com/in/kelly-ryoo/" link3="https://github.com/kelly-ryoo" link4="mailto:ryoo.kellyy@gmail.com" />
 
     </div>
   );
