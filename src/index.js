@@ -9,7 +9,6 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import { Component } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 
-import ScrollableAnchor from "react-scrollable-anchor";
 
 /*
 1) make dynamic
@@ -150,7 +149,7 @@ class Element extends React.Component {
             <span class="col-4"></span>
           </span>
 
-          <span class="row learn-more-row">
+          <span class="row learn-more-row" style={{display: this.props.boolLeanMore}}>
             <p class="desc col-8 learn-more"><a href={this.props.learnmore}>LEARN MORE →</a></p>
             <span class="col-4"></span>
           </span>
@@ -226,19 +225,19 @@ class SayHi extends React.Component {
 
 
 // RENDERING ========================================
-var description1 = "Hello! My name is Kelly Ryoo, and I’m a student studying computer science at Cornell University in Ithaca, NY. I’m interested in front-end web dev and IOS development.";
-var description2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.";
-var description3 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.";
+var description1 = "Hello! My name is Kelly Ryoo, and I’m a student studying computer science at Cornell University in Ithaca, NY. I’m interested in front-end web dev and IOS development. I also have an interest in physics/astronomy, arabic, and east asian studies.";
+var description2 = "Scroll down to learn more about my experience in computer science, as well as some of the executive positions I've held in student organizations.";
+var description3 = "I designed and coded this website, but here are some other cool things I've made in the past!";
 
-var uidev = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.";
-var sun = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.";
-var pf = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.";
-var research = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.";
-var sd = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.";
-var cc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.";
+var uidev = "Worked as the UI Developer Intern at Hashtag Systems Inc. Learned and worked with front-end web development languages (HTML, CSS, Javascript), along with frameworks (Bootstrap). Frequently worked with Wordpress websites (plugins, themes, etc.).";
+var sun = "Worked as a part of the Cornell Daily Sun's web development team. Maintained the Cornell Sun's website and strengthened the organization's online presence through redesigning and coding special pages. Also contributed to other side projects involving HTML, CSS and React.";
+var pf = "Was a part of the design team at Passionfruit. Designed graphics and informational instagram posts for Korean and American audiences. Worked under a design lead who guided me throughout the process. Mainly used with Figma and Procreate.";
+var research = "Will be participating in the Cornell McMahon Lab to study laser neural networks.";
+var sd = "Will be hosting social events for WICC (Women In Computing Cornell) members.";
+var cc = "Organized and hosted a variety of events as the events lead of Cornell Creatives. Held events such as calligraphy workshops and tech panels. Collaborated with other student organizations to host events tailored towards the CC community.";
 
-var app = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.";
-var textadventure = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.";
+var app = "Worked with four other students to create a flashcard app. Features include logging in/signing up, adding new flashcard set, editing flashcard sets, etc. Placed first place for 'Best Remote App' in the HackChallenge.";
+var textadventure = "Coded a textadventure game in Java.";
 
 
 function App() {
@@ -251,18 +250,18 @@ function App() {
       <Page title="About Me" desc={description1} id="about" imgurl="aboutme" />
 
       <Page title="Experience" desc={description2} id="experience" imgurl="aboutme" />
-      <Element title="UI Developmer" color="#FF971D" background="#F9F6F7" desc={uidev} url="https://www.hashtag-ca.com/images/hashtag-new-logo-header.svg" width="170" height="40" date="June 2019 ~ Present" learnmore="google.com"/>
-      <Element title="Web Developer" color="#F6F6F6" background="#E49393" desc={sun} url="https://cornellsun.com/wp-content/uploads/2015/11/sunbannerwebsite-10.png" width="190" height="40" date="Oct 2020 ~ Present" />
-      <Element title="Graphic Designer" color="#F56A79" background="#D9ECF2" desc={pf} url="https://static1.squarespace.com/static/5f2a64ff769ae615affd3ce1/t/5f3bbb754b31496c55fb5fd5/1607397414333/?format=1500w" width="70" height="50" date="Oct 2020 ~ Present" />
-      <Element title="Researcher" color="#557571" background="#F7D1BA" desc={research} url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Cornell_University_seal.svg/1024px-Cornell_University_seal.svg.png" width="70" height="50" date="Oct 2020 ~ Present" />
-      <Element title="Social Director" color="#3D7EA6" background="#FFA5A5" desc={sd} url="https://wicc.cornell.edu/img/watermark.png" width="120" height="30" date="Oct 2020 ~ Present" />
-      <Element title="Events Lead" color="#9088D4" background="#EBCFC4" desc={cc} url="http://cornellcreatives.com/img/newLogo.png" width="70" height="50" date="Oct 2020 ~ Present" />
+      <Element title="UI Developmer" color="#FF971D" background="#F9F6F7" desc={uidev} url="https://www.hashtag-ca.com/images/hashtag-new-logo-header.svg" width="170" height="40" date="June 2019 ~ Present" boolLeanMore="none"/>
+      <Element title="Web Developer" color="#F6F6F6" background="#E49393" desc={sun} url="https://cornellsun.com/wp-content/uploads/2015/11/sunbannerwebsite-10.png" width="190" height="40" date="Oct 2020 ~ Present" boolLeanMore="none"/>
+      <Element title="Graphic Designer" color="#F56A79" background="#D9ECF2" desc={pf} url="https://static1.squarespace.com/static/5f2a64ff769ae615affd3ce1/t/5f3bbb754b31496c55fb5fd5/1607397414333/?format=1500w" width="70" height="50" date="Oct 2020 ~ Present" boolLeanMore="block" learnmore="https://passionfruit.one/" />
+      <Element title="Researcher" color="#557571" background="#F7D1BA" desc={research} url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Cornell_University_seal.svg/1024px-Cornell_University_seal.svg.png" width="70" height="50" date="Oct 2020 ~ Present" boolLeanMore="block" learnmore="https://mcmahon.aep.cornell.edu/" />
+      <Element title="Social Director" color="#3D7EA6" background="#FFA5A5" desc={sd} url="https://wicc.cornell.edu/img/watermark.png" width="120" height="30" date="Oct 2020 ~ Present" boolLeanMore="block" learnmore="http://wicc.cornell.edu/"/>
+      <Element title="Events Lead" color="#9088D4" background="#EBCFC4" desc={cc} url="http://cornellcreatives.com/img/newLogo.png" width="70" height="50" date="Oct 2020 ~ Present" boolLeanMore="block" learnmore="http://cornellcreatives.com/"/>
 
       <Page title="Projects" desc={description3} id="projects" imgurl="aboutme" />
-      <ProjectElement title="Flashcard App" color="#C9CBFF" background="#EFF8FF" desc={app} date="December 2020" />
-      <ProjectElement title="Textadventure" color="#999B84" background="#F4EEED" desc={textadventure} date="March 2019" />
+      <ProjectElement title="Flashcard App" color="#C9CBFF" background="#EFF8FF" desc={app} date="December 2020" boolLeanMore="block" learnmore="https://github.com/kelly-ryoo/flashcard-app-hack-challenge-frontend"/>
+      <ProjectElement title="Textadventure" color="#999B84" background="#F4EEED" desc={textadventure} date="March 2019" boolLeanMore="block" learnmore="https://github.com/kelly-ryoo/Game-Hidden-Treasure"/>
 
-      <SayHi title="Experience" id="sayhi" />
+      <SayHi title="SayHi" id="sayhi" />
 
     </div>
   );
