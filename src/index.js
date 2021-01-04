@@ -25,7 +25,7 @@ import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverf
       <ScrollableAnchor id="home">
 
       <div className="page container">
-        <div class="nav-wrapper">
+        <div class="nav-wrapper"> 
           <div class="nav row">
             <div class="col-1 logo nav-left">KYR</div>
             <div class="col-10 nav-right">
