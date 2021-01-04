@@ -9,12 +9,9 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import { Component } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 
+import ScrollableAnchor from 'react-scrollable-anchor'
 
-/*
-1) make dynamic
-2) add bolding to nav when you're on that section
-3) fix animation + photo path
-*/
+import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 
 
 // TOP PAGE TEMPLATE ========================================
@@ -25,7 +22,9 @@ import { Parallax } from 'react-scroll-parallax';
 
   render() {
     return (
-      <div className="page container" id="home">
+      <ScrollableAnchor id="home">
+
+      <div className="page container">
         <div class="nav-wrapper">
           <div class="nav row">
             <div class="col-1 logo nav-left">KYR</div>
@@ -58,7 +57,7 @@ import { Parallax } from 'react-scroll-parallax';
           <img src={me} width="350" height="490"/>
         </div>
       </div>
-      
+      </ScrollableAnchor>
     );
   }
 }
@@ -95,9 +94,12 @@ class Page extends React.Component {
   render() {
     
     return (
-      <div className="page container" id={this.props.id}>
+      <ScrollableAnchor id={this.props.id}>
+
+      <div className="page container">
+
         <div class="header-wrapper">
-          <Parallax className="custom-class" y={[-40, 40]} tagOuter="figure">
+          <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
           <span class="row">
             <h2 class="title col-12">{this.props.title}</h2>
           </span>
@@ -111,8 +113,9 @@ class Page extends React.Component {
 
 
         </div>
-
       </div>
+      </ScrollableAnchor>
+
 
     );
   }
@@ -127,18 +130,20 @@ class Element extends React.Component {
   render() {
     return (
       <div className="page"  style={{backgroundColor: this.props.background}}>
+
         <div class="container">
         <div class="header-wrapper">
+          <Parallax className="custom-class" y={[-20, 25]} tagOuter="figure">
           <span class="row">
             <h2 class="title col-12" style={{color: this.props.color}} >{this.props.title}</h2>
           </span>
+          </Parallax>
 
           <span class="row">
             <span class="col-12">
             <img class="logo" src={this.props.url} width={this.props.width} height={this.props.height}></img>
             <p class="date">{this.props.date}</p></span>
           </span>
-
           <span class="row">
             <p class="desc col-8">{this.props.desc}</p>
             <span class="col-4"></span>
@@ -150,6 +155,7 @@ class Element extends React.Component {
           </span>
         </div>
         </div>
+
       </div>
     );
   }
@@ -166,9 +172,11 @@ class ProjectElement extends React.Component {
       <div className="page"  style={{backgroundColor: this.props.background}}>
         <div class="container">
         <div class="header-wrapper">
+          <Parallax className="custom-class" y={[-40, 40]} tagOuter="figure">
           <span class="row">
             <h2 class="title col-12" style={{color: this.props.color}} >{this.props.title}</h2>
           </span>
+          </Parallax>
 
           <span class="row">
             <span class="col-12">
@@ -199,7 +207,9 @@ class Skills extends React.Component {
 
   render() {
     return (
-      <div className="page container" id={this.props.id}>
+      <ScrollableAnchor id={this.props.id}>
+
+      <div className="page container">
         <div class="header-wrapper">
           <div class="row">
             <h2 class="title col-12">Skills</h2>
@@ -216,6 +226,7 @@ class Skills extends React.Component {
 
         </div>
       </div>
+      </ScrollableAnchor>
     );
   }
 }
@@ -228,7 +239,9 @@ class SayHi extends React.Component {
 
   render() {
     return (
-      <div className="page container" id={this.props.id}>
+      <ScrollableAnchor id={this.props.id}>
+
+      <div className="page container">
         <div class="header-wrapper">
           <div class="row">
             <h2 class="title col-12">Say Hi</h2>
@@ -248,6 +261,7 @@ class SayHi extends React.Component {
 
         </div>
       </div>
+      </ScrollableAnchor>
     );
   }
 }
