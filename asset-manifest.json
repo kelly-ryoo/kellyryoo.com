@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/kellyryoo.com/static/css/main.2eb84d96.chunk.css",
+    "main.js": "/kellyryoo.com/static/js/main.08366751.chunk.js",
+    "main.js.map": "/kellyryoo.com/static/js/main.08366751.chunk.js.map",
+    "runtime-main.js": "/kellyryoo.com/static/js/runtime-main.bfaeb13c.js",
+    "runtime-main.js.map": "/kellyryoo.com/static/js/runtime-main.bfaeb13c.js.map",
+    "static/css/2.95f25948.chunk.css": "/kellyryoo.com/static/css/2.95f25948.chunk.css",
+    "static/js/2.7630713c.chunk.js": "/kellyryoo.com/static/js/2.7630713c.chunk.js",
+    "static/js/2.7630713c.chunk.js.map": "/kellyryoo.com/static/js/2.7630713c.chunk.js.map",
+    "index.html": "/kellyryoo.com/index.html",
+    "static/css/2.95f25948.chunk.css.map": "/kellyryoo.com/static/css/2.95f25948.chunk.css.map",
+    "static/css/main.2eb84d96.chunk.css.map": "/kellyryoo.com/static/css/main.2eb84d96.chunk.css.map",
+    "static/js/2.7630713c.chunk.js.LICENSE.txt": "/kellyryoo.com/static/js/2.7630713c.chunk.js.LICENSE.txt",
+    "static/media/about-me.e68c5360.png": "/kellyryoo.com/static/media/about-me.e68c5360.png",
+    "static/media/me.a618fcc7.png": "/kellyryoo.com/static/media/me.a618fcc7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bfaeb13c.js",
+    "static/css/2.95f25948.chunk.css",
+    "static/js/2.7630713c.chunk.js",
+    "static/css/main.2eb84d96.chunk.css",
+    "static/js/main.08366751.chunk.js"
+  ]
+}
